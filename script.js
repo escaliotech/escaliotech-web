@@ -4,13 +4,13 @@
 const CONFIG = {
   // Escribe tu número con código de país, sin +, espacios ni guiones.
   // Ejemplo México: 523312345678
-  whatsapp: "52XXXXXXXXXX",
+  whatsapp: "523319057803",
 
-  instagram: "https://instagram.com/TU_USUARIO",
-  facebook: "https://facebook.com/TU_USUARIO",
-  tiktok: "https://tiktok.com/@TU_USUARIO",
+  instagram: "https://instagram.com/escaliotech",
+  facebook: "https://facebook.com/escaliotech",
+  tiktok: "https://tiktok.com/@escaliotech",
 
-  whatsappMessage: "Hola EscalioTech, me gustaría conocer sus servicios."
+  whatsappMessage: "Hola EscalioTech, me gustaría escalar mi negocio."
 };
 
 // Genera automáticamente los enlaces de WhatsApp.
