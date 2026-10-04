@@ -1,54 +1,307 @@
-// =============================
-// CONFIGURA AQUÍ TUS DATOS
-// =============================
+/* =========================================
+   ESCALIOTECH V2
+   CONFIGURACIÓN
+   ========================================= */
+
+
+/*
+   ================================
+   DATOS DE ESCALIOTECH
+   ================================
+*/
+
 const CONFIG = {
-  // Escribe tu número con código de país, sin +, espacios ni guiones.
-  // Ejemplo México: 523312345678
+
+  /*
+    WhatsApp de EscalioTech.
+
+    Formato:
+    52 + número
+
+    SIN:
+    +
+    espacios
+    guiones
+  */
+
   whatsapp: "523319057803",
 
-  instagram: "https://instagram.com/escaliotech",
-  facebook: "https://facebook.com/escaliotech",
-  tiktok: "https://tiktok.com/@escaliotech",
 
-  whatsappMessage: "Hola EscalioTech, me gustaría escalar mi negocio."
+  /*
+    Redes sociales
+  */
+
+  instagram:
+    "https://instagram.com/escaliotech",
+
+  facebook:
+    "https://facebook.com/escaliotech",
+
+  tiktok:
+    "https://tiktok.com/@escaliotech"
+
 };
 
-// Genera automáticamente los enlaces de WhatsApp.
-document.querySelectorAll("[data-whatsapp]").forEach((link) => {
-  const number = CONFIG.whatsapp.replace(/\D/g, "");
-  const message = encodeURIComponent(CONFIG.whatsappMessage);
-  link.href = number && !number.includes("XXXXXXXX")
-    ? `https://wa.me/${number}?text=${message}`
-    : "#";
-});
 
-document.querySelector("[data-instagram]")?.setAttribute("href", CONFIG.instagram);
-document.querySelector("[data-facebook]")?.setAttribute("href", CONFIG.facebook);
-document.querySelector("[data-tiktok]")?.setAttribute("href", CONFIG.tiktok);
+/*
+   =========================================
+   MENSAJES PERSONALIZADOS DE WHATSAPP
+   =========================================
+*/
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const WHATSAPP_MESSAGES = {
 
-// Menú móvil
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav");
+  general:
+    "Hola EscalioTech 👋 Me interesa conocer sus soluciones digitales para mi negocio.",
 
-menuToggle?.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", open);
-});
+  nfc:
+    "Hola EscalioTech 👋 Me interesa conocer las tarjetas NFC para mi negocio. ¿Me pueden compartir información sobre los paquetes disponibles?",
 
-document.querySelectorAll(".nav a").forEach((a) => {
-  a.addEventListener("click", () => nav.classList.remove("open"));
-});
+  web:
+    "Hola EscalioTech 👋 Me interesa una página web para mi negocio. Me gustaría conocer sus opciones y paquetes.",
 
-// Animaciones al entrar en pantalla
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
+  automation:
+    "Hola EscalioTech 👋 Me interesa conocer sus soluciones de automatización para mi negocio. ¿Podrían orientarme?",
+
+  custom:
+    "Hola EscalioTech 👋 Tengo una idea/proyecto y me gustaría conocer si pueden desarrollar una solución tecnológica personalizada para mi negocio.",
+
+  package:
+    "Hola EscalioTech 👋 Me interesa conocer sus paquetes de soluciones digitales. ¿Me pueden compartir las opciones disponibles?"
+};
+
+
+/*
+   =========================================
+   CREAR ENLACES DE WHATSAPP
+   =========================================
+*/
+
+document
+  .querySelectorAll("[data-whatsapp]")
+  .forEach((link) => {
+
+    const number =
+      CONFIG.whatsapp.replace(/\D/g, "");
+
+    const service =
+      link.dataset.whatsapp || "general";
+
+    const message =
+      WHATSAPP_MESSAGES[service] ||
+      WHATSAPP_MESSAGES.general;
+
+    if (number) {
+
+      link.href =
+        `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+
+      link.target = "_blank";
+
+      link.rel = "noopener noreferrer";
+
     }
-  });
-}, { threshold: 0.12 });
 
-document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  });
+
+
+/*
+   =========================================
+   REDES SOCIALES
+   =========================================
+*/
+
+document
+  .querySelectorAll("[data-instagram]")
+  .forEach((link) => {
+
+    link.href =
+      CONFIG.instagram;
+
+    link.target = "_blank";
+
+    link.rel =
+      "noopener noreferrer";
+
+  });
+
+
+document
+  .querySelectorAll("[data-facebook]")
+  .forEach((link) => {
+
+    link.href =
+      CONFIG.facebook;
+
+    link.target = "_blank";
+
+    link.rel =
+      "noopener noreferrer";
+
+  });
+
+
+document
+  .querySelectorAll("[data-tiktok]")
+  .forEach((link) => {
+
+    link.href =
+      CONFIG.tiktok;
+
+    link.target = "_blank";
+
+    link.rel =
+      "noopener noreferrer";
+
+  });
+
+
+/*
+   =========================================
+   AÑO AUTOMÁTICO
+   =========================================
+*/
+
+const year =
+  document.getElementById("year");
+
+if (year) {
+
+  year.textContent =
+    new Date().getFullYear();
+
+}
+
+
+/*
+   =========================================
+   MENÚ MÓVIL
+   =========================================
+*/
+
+const menuToggle =
+  document.querySelector(".menu-toggle");
+
+const nav =
+  document.querySelector(".nav");
+
+
+menuToggle?.addEventListener(
+  "click",
+  () => {
+
+    const isOpen =
+      nav.classList.toggle("open");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
+
+    menuToggle.textContent =
+      isOpen ? "✕" : "☰";
+
+  }
+);
+
+
+/*
+   Cerrar menú al tocar un enlace
+*/
+
+document
+  .querySelectorAll(".nav a")
+  .forEach((link) => {
+
+    link.addEventListener(
+      "click",
+      () => {
+
+        nav.classList.remove("open");
+
+        menuToggle?.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        if (menuToggle) {
+          menuToggle.textContent = "☰";
+        }
+
+      }
+    );
+
+  });
+
+
+/*
+   =========================================
+   ANIMACIONES AL HACER SCROLL
+   =========================================
+*/
+
+const observer =
+  new IntersectionObserver(
+
+    (entries) => {
+
+      entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add(
+            "visible"
+          );
+
+          observer.unobserve(
+            entry.target
+          );
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold: 0.12
+    }
+
+  );
+
+
+document
+  .querySelectorAll(".reveal")
+  .forEach((element) => {
+
+    observer.observe(element);
+
+  });
+
+
+/*
+   =========================================
+   EVITAR PARPADEO DE ENLACES VACÍOS
+   =========================================
+*/
+
+document
+  .querySelectorAll('a[href="#"]')
+  .forEach((link) => {
+
+    link.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          link.hasAttribute("data-whatsapp")
+        ) {
+          return;
+        }
+
+        event.preventDefault();
+
+      }
+    );
+
+  });
