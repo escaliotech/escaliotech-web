@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-    content="EscalioTech ayuda a negocios a crecer mediante tecnología: tarjetas NFC, páginas web, automatización y soluciones digitales.">
+    <meta name="description"
+          content="EscalioTech ayuda a negocios a crecer mediante tecnología, placas NFC, páginas web y automatización.">
 
-  <meta name="theme-color" content="#07111f">
+    <meta name="theme-color" content="#05070d">
 
-  <meta property="og:title" content="EscalioTech | Tecnología para hacer crecer tu negocio">
-  <meta property="og:description" content="NFC, páginas web y soluciones digitales para negocios.">
-  <meta property="og:type" content="website">
+    <title>EscalioTech | Tecnología para hacer crecer tu negocio</title>
 
-  <title>EscalioTech | Tecnología para hacer crecer tu negocio</title>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+          href="styles.css">
 </head>
 
 <body>
@@ -32,343 +33,669 @@
      HEADER
 ========================= -->
 
-<header class="site-header">
+<header class="header" id="header">
 
-  <div class="container nav-wrap">
+    <div class="container nav">
 
-    <a href="#inicio" class="brand">
+        <a href="#inicio" class="logo">
+            <span class="logo-mark">E</span>
+            <span>Escalio<span>Tech</span></span>
+        </a>
 
-      <span class="brand-mark">E</span>
+        <nav class="desktop-nav">
 
-      <span class="brand-text">
-        <strong>Escalio<span>Tech</span></strong>
-        <small>TU NEGOCIO, EN EL SIGUIENTE NIVEL</small>
-      </span>
+            <a href="#producto">NFC</a>
 
-    </a>
+            <a href="#personalizacion">
+                Personalización
+            </a>
 
-    <button
-      class="menu-toggle"
-      aria-label="Abrir menú"
-      aria-expanded="false">
-      ☰
-    </button>
+            <a href="#servicios">
+                Servicios
+            </a>
 
-    <nav class="nav">
+            <a href="#paquetes">
+                Paquetes
+            </a>
 
-      <a href="#nfc">NFC</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#paquetes">Paquetes</a>
-      <a href="#proceso">Cómo funciona</a>
-      <a href="#contacto">Contacto</a>
+            <a href="#contacto">
+                Contacto
+            </a>
 
-      <a
-        class="nav-cta"
-        data-whatsapp="general"
-        href="#">
-        Hablar con nosotros
-      </a>
+        </nav>
 
-    </nav>
+        <a href="#contacto"
+           class="nav-button">
+            Cotizar
+        </a>
 
-  </div>
+        <button class="menu-button"
+                id="menuButton"
+                aria-label="Abrir menú">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#producto">NFC</a>
+
+        <a href="#personalizacion">
+            Personalización
+        </a>
+
+        <a href="#servicios">
+            Servicios
+        </a>
+
+        <a href="#paquetes">
+            Paquetes
+        </a>
+
+        <a href="#contacto">
+            Contacto
+        </a>
+
+    </div>
 
 </header>
 
 
-<main id="inicio">
+<main>
 
 <!-- =========================
      HERO
 ========================= -->
 
-<section class="hero section">
+<section class="hero" id="inicio">
 
-  <div class="hero-glow glow-one"></div>
-  <div class="hero-glow glow-two"></div>
+    <div class="hero-glow glow-one"></div>
+    <div class="hero-glow glow-two"></div>
 
-  <div class="container hero-grid">
+    <div class="container hero-grid">
 
-    <div class="hero-copy reveal">
+        <div class="hero-content">
 
-      <div class="badge">
-        <span class="badge-dot"></span>
-        TECNOLOGÍA PARA NEGOCIOS
-      </div>
+            <div class="eyebrow">
+                <span></span>
+                Tecnología para negocios
+            </div>
 
-      <h1>
-        Haz crecer tu
-        <span>negocio con tecnología.</span>
-      </h1>
+            <h1>
+                Haz que cada cliente
+                <span>tenga algo que decir.</span>
+            </h1>
 
-      <p class="hero-description">
-        Creamos soluciones digitales que ayudan a tu negocio
-        a conseguir más clientes, mejorar su presencia online
-        y aprovechar mejor la tecnología.
-      </p>
+            <p class="hero-text">
 
-      <div class="hero-actions">
+                Convierte visitas en reseñas, presencia digital
+                y nuevas oportunidades con soluciones tecnológicas
+                diseñadas para tu negocio.
 
-        <a
-          class="btn btn-primary"
-          data-whatsapp="general"
-          href="#">
-          Quiero hacer crecer mi negocio
-          <span>→</span>
-        </a>
+            </p>
 
-        <a
-          class="btn btn-secondary"
-          href="#servicios">
-          Ver soluciones
-        </a>
+            <div class="hero-actions">
 
-      </div>
+                <a href="#producto"
+                   class="btn btn-primary">
 
-      <div class="hero-trust">
+                    Conocer las placas NFC
+                    <span>→</span>
 
-        <span>✓ Soluciones personalizadas</span>
-        <span>✓ Atención directa</span>
-        <span>✓ Tecnología accesible</span>
+                </a>
 
-      </div>
+                <a href="#servicios"
+                   class="btn btn-secondary">
 
-    </div>
+                    Ver servicios
 
+                </a>
 
-    <div class="hero-product reveal delay-1">
+            </div>
 
-      <div class="product-glow"></div>
+            <div class="hero-trust">
 
-      <div class="product-frame">
+                <div>
+                    <strong>NFC + QR</strong>
+                    <span>Fácil de usar</span>
+                </div>
 
-        <div class="product-top">
+                <div>
+                    <strong>Diseño</strong>
+                    <span>Personalizable</span>
+                </div>
 
-          <span>ESCALIOTECH</span>
+                <div>
+                    <strong>Digital</strong>
+                    <span>Sin complicaciones</span>
+                </div>
 
-          <span class="product-status">
-            NFC
-          </span>
+            </div>
 
         </div>
 
-        <img
-          src="producto-nfc.jpg"
-          alt="Tarjeta NFC de EscalioTech para reseñas de Google"
-          class="product-image">
 
-        <div class="product-caption">
+        <!-- PRODUCTO HERO -->
 
-          <strong>
-            Más fácil para tus clientes.
-          </strong>
+        <div class="hero-product">
 
-          <span>
-            Toca o escanea y conecta con tu negocio.
-          </span>
+            <div class="product-orbit orbit-one"></div>
+            <div class="product-orbit orbit-two"></div>
+
+            <div class="product-badge">
+                <span class="pulse"></span>
+                Producto destacado
+            </div>
+
+            <img src="producto-nfc.jpg"
+                 alt="Placa NFC para reseñas de Google"
+                 class="hero-image">
 
         </div>
 
-      </div>
-
     </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================
-     PROBLEMA
+     PRODUCTO
 ========================= -->
 
-<section class="section problem-section">
+<section class="section product-section"
+         id="producto">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-heading centered reveal">
+        <div class="section-heading">
 
-      <div class="eyebrow">
-        EL PROBLEMA
-      </div>
+            <div class="eyebrow">
+                <span></span>
+                Nuestro producto
+            </div>
 
-      <h2>
-        Tu negocio puede ser bueno.
-        <span>Pero necesita ser encontrado.</span>
-      </h2>
+            <h2>
+                Una forma más fácil de
+                <span>conseguir reseñas.</span>
+            </h2>
 
-      <p>
-        Hoy los clientes buscan negocios en internet antes
-        de tomar una decisión.
-      </p>
+            <p>
+                Una placa que combina tecnología NFC y código QR
+                para que tus clientes puedan acceder fácilmente
+                al perfil de tu negocio.
+            </p>
+
+        </div>
+
+
+        <div class="product-showcase">
+
+            <!-- GALERÍA -->
+
+            <div class="gallery">
+
+                <div class="gallery-main">
+
+                    <img id="mainProductImage"
+                         src="producto-nfc.jpg"
+                         alt="Producto NFC EscalioTech">
+
+                </div>
+
+                <div class="gallery-controls">
+
+                    <button class="gallery-thumb active"
+                            data-image="producto-nfc.jpg"
+                            data-title="Placa negra">
+
+                        <img src="producto-nfc.jpg"
+                             alt="Placa NFC negra">
+
+                    </button>
+
+                    <button class="gallery-thumb"
+                            data-image="producto-nfc-blanco.jpg"
+                            data-title="Placa blanca">
+
+                        <img src="producto-nfc-blanco.jpg"
+                             alt="Placa NFC blanca">
+
+                    </button>
+
+                    <button class="gallery-thumb"
+                            data-image="personalizado-blanco.png"
+                            data-title="Personalizada blanca">
+
+                        <img src="personalizado-blanco.png"
+                             alt="Placa NFC personalizada blanca">
+
+                    </button>
+
+                    <button class="gallery-thumb"
+                            data-image="personalizado-negro.png"
+                            data-title="Personalizada negra">
+
+                        <img src="personalizado-negro.png"
+                             alt="Placa NFC personalizada negra">
+
+                    </button>
+
+                </div>
+
+                <p class="gallery-caption"
+                   id="galleryCaption">
+
+                    Placa negra
+
+                </p>
+
+            </div>
+
+
+            <!-- INFO -->
+
+            <div class="product-info">
+
+                <div class="mini-label">
+                    NFC + QR
+                </div>
+
+                <h3>
+                    Tu negocio,
+                    <strong>a un toque.</strong>
+                </h3>
+
+                <p>
+                    Tus clientes pueden acercar su teléfono a la
+                    placa o escanear el código QR para acceder
+                    rápidamente al destino configurado.
+                </p>
+
+
+                <div class="feature-list">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            NFC
+                        </div>
+
+                        <div>
+                            <strong>
+                                Tecnología NFC
+                            </strong>
+
+                            <span>
+                                Acercar el teléfono y acceder.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            QR
+                        </div>
+
+                        <div>
+                            <strong>
+                                Código QR
+                            </strong>
+
+                            <span>
+                                Una alternativa rápida para cualquier teléfono.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ★
+                        </div>
+
+                        <div>
+                            <strong>
+                                Más oportunidades de reseña
+                            </strong>
+
+                            <span>
+                                Facilita que tus clientes encuentren dónde dejar su opinión.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <a href="#contacto"
+                   class="btn btn-primary">
+
+                    Quiero información
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
-
-
-    <div class="problem-grid">
-
-      <article class="info-card reveal">
-
-        <div class="card-icon">⌖</div>
-
-        <h3>Poca visibilidad</h3>
-
-        <p>
-          Si tus clientes no encuentran fácilmente tu negocio,
-          puedes perder oportunidades.
-        </p>
-
-      </article>
-
-
-      <article class="info-card reveal delay-1">
-
-        <div class="card-icon">★</div>
-
-        <h3>Pocas reseñas</h3>
-
-        <p>
-          Las opiniones ayudan a generar confianza antes
-          de que una persona elija dónde comprar.
-        </p>
-
-      </article>
-
-
-      <article class="info-card reveal delay-2">
-
-        <div class="card-icon">◎</div>
-
-        <h3>Presencia digital débil</h3>
-
-        <p>
-          Una presencia profesional facilita que tus clientes
-          conozcan y recuerden tu negocio.
-        </p>
-
-      </article>
-
-
-      <article class="info-card reveal delay-3">
-
-        <div class="card-icon">↗</div>
-
-        <h3>Procesos manuales</h3>
-
-        <p>
-          Algunas tareas pueden automatizarse para ahorrar
-          tiempo y mejorar tu operación.
-        </p>
-
-      </article>
-
-    </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================
-     NFC
+     PERSONALIZACIÓN
 ========================= -->
 
-<section class="section nfc-section" id="nfc">
+<section class="section customization"
+         id="personalizacion">
 
-  <div class="container nfc-grid">
+    <div class="container">
 
-    <div class="nfc-visual reveal">
+        <div class="custom-grid">
 
-      <div class="image-backdrop"></div>
+            <div class="custom-content">
 
-      <div class="nfc-image-card">
+                <div class="eyebrow">
+                    <span></span>
+                    Personalización
+                </div>
 
-        <img
-          src="producto-nfc.jpg"
-          alt="Producto NFC EscalioTech"
-          loading="lazy">
+                <h2>
+                    Tu placa puede verse
+                    <span>como tu marca.</span>
+                </h2>
 
-        <div class="floating-tag tag-one">
-          NFC
+                <p>
+                    No tienes que conformarte con una placa genérica.
+                    Podemos adaptar el diseño para que combine con
+                    la identidad visual de tu negocio.
+                </p>
+
+
+                <div class="custom-points">
+
+                    <div>
+                        <span>✓</span>
+                        Logo de tu negocio
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Colores de tu marca
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Diseño adaptado a tu negocio
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Diferentes estilos y acabados
+                    </div>
+
+                </div>
+
+
+                <a href="#contacto"
+                   class="btn btn-primary">
+
+                    Quiero una personalizada
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="custom-gallery">
+
+                <div class="custom-card card-main">
+
+                    <img src="personalizado-negro.png"
+                         alt="Placa NFC personalizada negra">
+
+                    <div class="custom-tag">
+                        Personalizada
+                    </div>
+
+                </div>
+
+
+                <div class="custom-card card-small">
+
+                    <img src="personalizado-blanco.png"
+                         alt="Placa NFC personalizada blanca">
+
+                </div>
+
+            </div>
+
         </div>
-
-        <div class="floating-tag tag-two">
-          ★ Reseñas
-        </div>
-
-      </div>
 
     </div>
 
-
-    <div class="nfc-content reveal delay-1">
-
-      <div class="eyebrow">
-        PRODUCTO DESTACADO
-      </div>
-
-      <h2>
-        Convierte un simple
-        <span>toque en una oportunidad.</span>
-      </h2>
-
-      <p class="section-text">
-        Nuestras tarjetas NFC permiten que tus clientes
-        accedan fácilmente al destino digital que tú elijas,
-        como tu perfil de Google, redes sociales, WhatsApp
-        o página web.
-      </p>
+</section>
 
 
-      <div class="feature-list">
+<!-- =========================
+     COMO FUNCIONA
+========================= -->
 
-        <div class="feature-item">
-          <span>01</span>
-          <div>
-            <strong>Acerca el celular</strong>
-            <p>El cliente utiliza NFC o escanea el QR.</p>
-          </div>
+<section class="section process"
+         id="como-funciona">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <div class="eyebrow">
+                <span></span>
+                Así funciona
+            </div>
+
+            <h2>
+                Tan sencillo como
+                <span>un toque.</span>
+            </h2>
+
+            <p>
+                Diseñamos la experiencia para que tu cliente
+                no tenga que complicarse.
+            </p>
+
         </div>
 
-        <div class="feature-item">
-          <span>02</span>
-          <div>
-            <strong>Accede al enlace</strong>
-            <p>Se abre automáticamente el destino configurado.</p>
-          </div>
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div class="step-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Acerca o escanea
+                </h3>
+
+                <p>
+                    El cliente acerca su teléfono a la placa
+                    o escanea el código QR.
+                </p>
+
+            </div>
+
+
+            <div class="step-line"></div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div class="step-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Accede
+                </h3>
+
+                <p>
+                    Se abre automáticamente el enlace configurado
+                    para tu negocio.
+                </p>
+
+            </div>
+
+
+            <div class="step-line"></div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="step-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Deja su opinión
+                </h3>
+
+                <p>
+                    Tu cliente puede encontrar fácilmente dónde
+                    compartir su experiencia.
+                </p>
+
+            </div>
+
         </div>
-
-        <div class="feature-item">
-          <span>03</span>
-          <div>
-            <strong>Facilita la acción</strong>
-            <p>Menos pasos para interactuar con tu negocio.</p>
-          </div>
-        </div>
-
-      </div>
-
-
-      <div class="result-box">
-
-        <strong>
-          Más facilidad → más interacciones → más oportunidades
-        </strong>
-
-      </div>
-
-
-      <a
-        class="btn btn-primary"
-        data-whatsapp="nfc"
-        href="#">
-        Consultar tarjetas NFC
-        <span>→</span>
-      </a>
 
     </div>
 
-  </div>
+</section>
+
+
+<!-- =========================
+     BENEFICIOS
+========================= -->
+
+<section class="section benefits">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                <span></span>
+                ¿Por qué EscalioTech?
+            </div>
+
+            <h2>
+                Tecnología que
+                <span>trabaja contigo.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="benefit-grid">
+
+            <article class="benefit-card">
+
+                <span class="benefit-number">
+                    01
+                </span>
+
+                <div class="benefit-icon">
+                    ★
+                </div>
+
+                <h3>
+                    Más fácil para tus clientes
+                </h3>
+
+                <p>
+                    Reduce los pasos necesarios para que una persona
+                    encuentre dónde compartir su experiencia.
+                </p>
+
+            </article>
+
+
+            <article class="benefit-card">
+
+                <span class="benefit-number">
+                    02
+                </span>
+
+                <div class="benefit-icon">
+                    ◉
+                </div>
+
+                <h3>
+                    Imagen más profesional
+                </h3>
+
+                <p>
+                    Una solución tecnológica que también forma parte
+                    de la experiencia de tu negocio.
+                </p>
+
+            </article>
+
+
+            <article class="benefit-card">
+
+                <span class="benefit-number">
+                    03
+                </span>
+
+                <div class="benefit-icon">
+                    ↗
+                </div>
+
+                <h3>
+                    Pensado para crecer
+                </h3>
+
+                <p>
+                    Puedes comenzar con una solución sencilla y
+                    posteriormente incorporar más herramientas digitales.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -377,206 +704,242 @@
      SERVICIOS
 ========================= -->
 
-<section class="section services-section" id="servicios">
+<section class="section services"
+         id="servicios">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-heading centered reveal">
+        <div class="section-heading centered">
 
-      <div class="eyebrow">
-        SOLUCIONES DIGITALES
-      </div>
+            <div class="eyebrow">
+                <span></span>
+                Soluciones digitales
+            </div>
 
-      <h2>
-        Tecnología que trabaja
-        <span>para tu negocio.</span>
-      </h2>
+            <h2>
+                Más que una placa.
+                <span>Más posibilidades.</span>
+            </h2>
 
-      <p>
-        Elige la solución que necesitas o cuéntanos qué
-        quieres mejorar y diseñaremos una propuesta para ti.
-      </p>
+            <p>
+                Podemos ayudarte a incorporar tecnología en diferentes
+                áreas de tu negocio.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <!-- NFC -->
+
+            <article class="service-card featured">
+
+                <div class="service-top">
+
+                    <span class="service-tag">
+                        Producto
+                    </span>
+
+                    <span class="service-icon">
+                        NFC
+                    </span>
+
+                </div>
+
+                <h3>
+                    Placas NFC + QR
+                </h3>
+
+                <p>
+                    Facilita el acceso de tus clientes a la experiencia
+                    digital que quieras ofrecer.
+                </p>
+
+                <ul>
+
+                    <li>
+                        ✓ NFC
+                    </li>
+
+                    <li>
+                        ✓ Código QR
+                    </li>
+
+                    <li>
+                        ✓ Diseño personalizado
+                    </li>
+
+                </ul>
+
+                <a href="#contacto"
+                   class="service-link"
+                   data-service="nfc">
+
+                    Consultar →
+                </a>
+
+            </article>
+
+
+            <!-- PERSONALIZACION -->
+
+            <article class="service-card">
+
+                <div class="service-top">
+
+                    <span class="service-tag">
+                        Diseño
+                    </span>
+
+                    <span class="service-icon">
+                        ✦
+                    </span>
+
+                </div>
+
+                <h3>
+                    Placas personalizadas
+                </h3>
+
+                <p>
+                    Adaptamos la apariencia de tu placa para que
+                    represente la identidad de tu negocio.
+                </p>
+
+                <ul>
+
+                    <li>
+                        ✓ Logo
+                    </li>
+
+                    <li>
+                        ✓ Colores
+                    </li>
+
+                    <li>
+                        ✓ Diseño a medida
+                    </li>
+
+                </ul>
+
+                <a href="#contacto"
+                   class="service-link"
+                   data-service="personalizada">
+
+                    Consultar →
+                </a>
+
+            </article>
+
+
+            <!-- WEB -->
+
+            <article class="service-card">
+
+                <div class="service-top">
+
+                    <span class="service-tag">
+                        Digital
+                    </span>
+
+                    <span class="service-icon">
+                        WEB
+                    </span>
+
+                </div>
+
+                <h3>
+                    Páginas web
+                </h3>
+
+                <p>
+                    Sitios web modernos para presentar tu negocio
+                    y facilitar que nuevos clientes te encuentren.
+                </p>
+
+                <ul>
+
+                    <li>
+                        ✓ Diseño responsive
+                    </li>
+
+                    <li>
+                        ✓ Adaptado a tu marca
+                    </li>
+
+                    <li>
+                        ✓ Optimizado para móvil
+                    </li>
+
+                </ul>
+
+                <a href="#contacto"
+                   class="service-link"
+                   data-service="web">
+
+                    Consultar →
+
+                </a>
+
+            </article>
+
+
+            <!-- AUTOMATIZACION -->
+
+            <article class="service-card">
+
+                <div class="service-top">
+
+                    <span class="service-tag">
+                        Tecnología
+                    </span>
+
+                    <span class="service-icon">
+                        ⚙
+                    </span>
+
+                </div>
+
+                <h3>
+                    Automatización
+                </h3>
+
+                <p>
+                    Soluciones digitales para reducir tareas repetitivas
+                    y mejorar procesos de tu negocio.
+                </p>
+
+                <ul>
+
+                    <li>
+                        ✓ Procesos digitales
+                    </li>
+
+                    <li>
+                        ✓ Automatizaciones
+                    </li>
+
+                    <li>
+                        ✓ Soluciones a medida
+                    </li>
+
+                </ul>
+
+                <a href="#contacto"
+                   class="service-link"
+                   data-service="automatizacion">
+
+                    Consultar →
+
+                </a>
+
+            </article>
+
+        </div>
 
     </div>
-
-
-    <div class="services-grid">
-
-
-      <!-- NFC -->
-
-      <article class="service-card featured reveal">
-
-        <div class="service-number">
-          01
-        </div>
-
-        <div class="service-icon">
-          NFC
-        </div>
-
-        <h3>
-          Tarjetas NFC
-        </h3>
-
-        <p>
-          Facilita que tus clientes interactúen con tu negocio
-          mediante NFC y códigos QR.
-        </p>
-
-        <ul>
-          <li>✓ NFC + QR</li>
-          <li>✓ Diseño personalizado</li>
-          <li>✓ Enlace configurable</li>
-          <li>✓ Ideal para negocios físicos</li>
-        </ul>
-
-        <div class="service-price">
-          <small>Precio y paquetes</small>
-          <strong>Consultar</strong>
-        </div>
-
-        <a
-          class="service-button"
-          data-whatsapp="nfc"
-          href="#">
-          Consultar NFC →
-        </a>
-
-      </article>
-
-
-      <!-- WEB -->
-
-      <article class="service-card reveal delay-1">
-
-        <div class="service-number">
-          02
-        </div>
-
-        <div class="service-icon">
-          WEB
-        </div>
-
-        <h3>
-          Páginas web
-        </h3>
-
-        <p>
-          Diseñamos páginas modernas y profesionales para
-          presentar tu negocio en internet.
-        </p>
-
-        <ul>
-          <li>✓ Diseño adaptable a celular</li>
-          <li>✓ Información de tu negocio</li>
-          <li>✓ Botones de contacto</li>
-          <li>✓ Integración con redes</li>
-        </ul>
-
-        <div class="service-price">
-          <small>Precio y paquetes</small>
-          <strong>Consultar</strong>
-        </div>
-
-        <a
-          class="service-button"
-          data-whatsapp="web"
-          href="#">
-          Cotizar página web →
-        </a>
-
-      </article>
-
-
-      <!-- AUTOMATIZACIÓN -->
-
-      <article class="service-card reveal delay-2">
-
-        <div class="service-number">
-          03
-        </div>
-
-        <div class="service-icon">
-          AUTO
-        </div>
-
-        <h3>
-          Automatización
-        </h3>
-
-        <p>
-          Automatizamos procesos repetitivos para ayudarte
-          a ahorrar tiempo y trabajar de forma más eficiente.
-        </p>
-
-        <ul>
-          <li>✓ Procesos automáticos</li>
-          <li>✓ Formularios</li>
-          <li>✓ Flujos digitales</li>
-          <li>✓ Soluciones personalizadas</li>
-        </ul>
-
-        <div class="service-price">
-          <small>Precio y paquetes</small>
-          <strong>Consultar</strong>
-        </div>
-
-        <a
-          class="service-button"
-          data-whatsapp="automation"
-          href="#">
-          Consultar automatización →
-        </a>
-
-      </article>
-
-
-      <!-- SOLUCIONES -->
-
-      <article class="service-card reveal delay-3">
-
-        <div class="service-number">
-          04
-        </div>
-
-        <div class="service-icon">
-          +
-        </div>
-
-        <h3>
-          Soluciones digitales
-        </h3>
-
-        <p>
-          ¿Tienes una necesidad específica? Podemos crear
-          una solución tecnológica adaptada a tu negocio.
-        </p>
-
-        <ul>
-          <li>✓ Análisis de necesidades</li>
-          <li>✓ Desarrollo personalizado</li>
-          <li>✓ Integraciones</li>
-          <li>✓ Tecnología para crecer</li>
-        </ul>
-
-        <div class="service-price">
-          <small>Precio y paquetes</small>
-          <strong>Consultar</strong>
-        </div>
-
-        <a
-          class="service-button"
-          data-whatsapp="custom"
-          href="#">
-          Hablar sobre mi proyecto →
-        </a>
-
-      </article>
-
-    </div>
-
-  </div>
 
 </section>
 
@@ -585,383 +948,134 @@
      PAQUETES
 ========================= -->
 
-<section class="section packages-section" id="paquetes">
+<section class="section packages"
+         id="paquetes">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-heading centered reveal">
+        <div class="section-heading centered">
 
-      <div class="eyebrow">
-        PAQUETES
-      </div>
+            <div class="eyebrow">
+                <span></span>
+                Opciones
+            </div>
 
-      <h2>
-        Una solución para cada
-        <span>etapa de tu negocio.</span>
-      </h2>
+            <h2>
+                Encuentra la solución
+                <span>para tu negocio.</span>
+            </h2>
 
-      <p>
-        Todavía no mostramos precios fijos porque cada negocio
-        tiene necesidades diferentes.
-      </p>
+            <p>
+                Cada negocio tiene necesidades diferentes.
+                Consulta las opciones disponibles y encuentra
+                la que mejor se adapte a ti.
+            </p>
+
+        </div>
+
+
+        <div class="package-grid">
+
+
+            <article class="package-card">
+
+                <div class="package-label">
+                    Esencial
+                </div>
+
+                <h3>
+                    NFC + QR
+                </h3>
+
+                <p>
+                    Una solución sencilla para comenzar
+                    a digitalizar la experiencia de tus clientes.
+                </p>
+
+                <div class="package-price">
+                    Consultar
+                    <span>precios</span>
+                </div>
+
+                <a href="#contacto"
+                   class="btn btn-secondary package-button"
+                   data-service="nfc">
+
+                    Consultar paquete
+
+                </a>
+
+            </article>
+
+
+            <article class="package-card popular">
+
+                <div class="popular-badge">
+                    Más personalizado
+                </div>
+
+                <div class="package-label">
+                    Personalizado
+                </div>
+
+                <h3>
+                    Diseño + NFC
+                </h3>
+
+                <p>
+                    Una placa diseñada para combinar con
+                    la identidad visual de tu negocio.
+                </p>
+
+                <div class="package-price">
+                    Consultar
+                    <span>precios</span>
+                </div>
+
+                <a href="#contacto"
+                   class="btn btn-primary package-button"
+                   data-service="personalizada">
+
+                    Consultar paquete
+
+                </a>
+
+            </article>
+
+
+            <article class="package-card">
+
+                <div class="package-label">
+                    Digital
+                </div>
+
+                <h3>
+                    Solución a medida
+                </h3>
+
+                <p>
+                    Combinación de herramientas digitales para
+                    las necesidades específicas de tu negocio.
+                </p>
+
+                <div class="package-price">
+                    Consultar
+                    <span>opciones</span>
+                </div>
+
+                <a href="#contacto"
+                   class="btn btn-secondary package-button"
+                   data-service="solucion">
+
+                    Hablar con EscalioTech
+
+                </a>
+
+            </article>
+
+        </div>
 
     </div>
-
-
-    <div class="packages-grid">
-
-
-      <article class="package-card reveal">
-
-        <div class="package-top">
-
-          <span class="package-label">
-            INICIO
-          </span>
-
-          <span class="package-icon">
-            01
-          </span>
-
-        </div>
-
-        <h3>
-          Presencia digital
-        </h3>
-
-        <p>
-          Para negocios que quieren comenzar a fortalecer
-          su presencia digital.
-        </p>
-
-        <div class="package-price">
-          Consultar precios
-        </div>
-
-        <ul>
-          <li>✓ Solución digital inicial</li>
-          <li>✓ Orientación personalizada</li>
-          <li>✓ Configuración básica</li>
-        </ul>
-
-        <a
-          href="#"
-          data-whatsapp="general"
-          class="package-button">
-          Consultar paquete
-        </a>
-
-      </article>
-
-
-      <article class="package-card popular reveal delay-1">
-
-        <div class="popular-badge">
-          MÁS SOLICITADO
-        </div>
-
-        <div class="package-top">
-
-          <span class="package-label">
-            CRECIMIENTO
-          </span>
-
-          <span class="package-icon">
-            02
-          </span>
-
-        </div>
-
-        <h3>
-          Crecimiento digital
-        </h3>
-
-        <p>
-          Combina diferentes herramientas para mejorar
-          la presencia y experiencia de tus clientes.
-        </p>
-
-        <div class="package-price">
-          Consultar precios
-        </div>
-
-        <ul>
-          <li>✓ Soluciones combinadas</li>
-          <li>✓ Diseño personalizado</li>
-          <li>✓ Configuración</li>
-          <li>✓ Atención personalizada</li>
-        </ul>
-
-        <a
-          href="#"
-          data-whatsapp="package"
-          class="package-button primary">
-          Consultar paquete
-        </a>
-
-      </article>
-
-
-      <article class="package-card reveal delay-2">
-
-        <div class="package-top">
-
-          <span class="package-label">
-            PERSONALIZADO
-          </span>
-
-          <span class="package-icon">
-            03
-          </span>
-
-        </div>
-
-        <h3>
-          Solución a medida
-        </h3>
-
-        <p>
-          Para negocios que necesitan una solución
-          tecnológica específica.
-        </p>
-
-        <div class="package-price">
-          Cotización personalizada
-        </div>
-
-        <ul>
-          <li>✓ Análisis del negocio</li>
-          <li>✓ Propuesta personalizada</li>
-          <li>✓ Desarrollo</li>
-          <li>✓ Implementación</li>
-        </ul>
-
-        <a
-          href="#"
-          data-whatsapp="custom"
-          class="package-button">
-          Crear mi solución
-        </a>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PROCESO
-========================= -->
-
-<section class="section process-section" id="proceso">
-
-  <div class="container narrow">
-
-    <div class="section-heading centered reveal">
-
-      <div class="eyebrow">
-        CÓMO FUNCIONA
-      </div>
-
-      <h2>
-        Simple.
-        <span>Claro. Profesional.</span>
-      </h2>
-
-    </div>
-
-
-    <div class="process-list">
-
-      <div class="process-item reveal">
-
-        <div class="process-number">
-          01
-        </div>
-
-        <div>
-          <h3>
-            Conocemos tu negocio
-          </h3>
-
-          <p>
-            Nos cuentas qué haces, qué necesitas y qué
-            quieres mejorar.
-          </p>
-        </div>
-
-      </div>
-
-
-      <div class="process-line"></div>
-
-
-      <div class="process-item reveal delay-1">
-
-        <div class="process-number">
-          02
-        </div>
-
-        <div>
-          <h3>
-            Diseñamos una solución
-          </h3>
-
-          <p>
-            Elegimos las herramientas y tecnología que
-            realmente tengan sentido para tu negocio.
-          </p>
-        </div>
-
-      </div>
-
-
-      <div class="process-line"></div>
-
-
-      <div class="process-item reveal delay-2">
-
-        <div class="process-number">
-          03
-        </div>
-
-        <div>
-          <h3>
-            Implementamos
-          </h3>
-
-          <p>
-            Ponemos en marcha la solución y dejamos todo
-            preparado para que puedas utilizarlo.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="process-line"></div>
-
-
-      <div class="process-item reveal delay-3">
-
-        <div class="process-number">
-          04
-        </div>
-
-        <div>
-          <h3>
-            Tu negocio sigue creciendo
-          </h3>
-
-          <p>
-            La tecnología deja de ser complicada y comienza
-            a trabajar a favor de tu negocio.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     POR QUÉ
-========================= -->
-
-<section class="section why-section">
-
-  <div class="container">
-
-    <div class="section-heading centered reveal">
-
-      <div class="eyebrow">
-        ¿POR QUÉ ESCALIOTECH?
-      </div>
-
-      <h2>
-        Tecnología pensada para
-        <span>negocios reales.</span>
-      </h2>
-
-    </div>
-
-
-    <div class="why-grid">
-
-      <article class="why-card reveal">
-
-        <div>✦</div>
-
-        <h3>
-          Innovación
-        </h3>
-
-        <p>
-          Incorporamos herramientas modernas para ayudarte
-          a diferenciarte.
-        </p>
-
-      </article>
-
-
-      <article class="why-card reveal delay-1">
-
-        <div>↗</div>
-
-        <h3>
-          Crecimiento
-        </h3>
-
-        <p>
-          Cada solución busca generar una mejora real
-          para tu negocio.
-        </p>
-
-      </article>
-
-
-      <article class="why-card reveal delay-2">
-
-        <div>◎</div>
-
-        <h3>
-          Simplicidad
-        </h3>
-
-        <p>
-          Tecnología fácil de entender y pensada para
-          que puedas utilizarla.
-        </p>
-
-      </article>
-
-
-      <article class="why-card reveal delay-3">
-
-        <div>◆</div>
-
-        <h3>
-          Personalización
-        </h3>
-
-        <p>
-          No todos los negocios necesitan lo mismo.
-          Adaptamos la solución.
-        </p>
-
-      </article>
-
-    </div>
-
-  </div>
 
 </section>
 
@@ -970,49 +1084,110 @@
      CTA
 ========================= -->
 
-<section class="section final-section" id="contacto">
+<section class="cta">
 
-  <div class="container">
+    <div class="cta-glow"></div>
 
-    <div class="final-cta reveal">
+    <div class="container cta-content">
 
-      <div class="final-glow"></div>
+        <div class="eyebrow">
+            <span></span>
+            ¿Listo para comenzar?
+        </div>
 
-      <div class="eyebrow">
-        TU NEGOCIO, EN EL SIGUIENTE NIVEL
-      </div>
+        <h2>
+            Hagamos que la tecnología
+            <span>trabaje para tu negocio.</span>
+        </h2>
 
-      <h2>
-        ¿Qué podemos hacer
-        <span>por tu negocio?</span>
-      </h2>
+        <p>
+            Cuéntanos qué necesitas y te ayudaremos a encontrar
+            la solución adecuada.
+        </p>
 
-      <p>
-        Cuéntanos qué necesitas y te ayudaremos a encontrar
-        la solución tecnológica adecuada.
-      </p>
+        <a href="#contacto"
+           class="btn btn-primary large">
 
-      <div class="hero-actions">
+            Hablar con EscalioTech
+            <span>→</span>
 
-        <a
-          class="btn btn-primary"
-          data-whatsapp="general"
-          href="#">
-          Hablar con EscalioTech
-          <span>→</span>
         </a>
-
-        <a
-          class="btn btn-secondary"
-          href="#servicios">
-          Ver servicios
-        </a>
-
-      </div>
 
     </div>
 
-  </div>
+</section>
+
+
+<!-- =========================
+     CONTACTO
+========================= -->
+
+<section class="section contact"
+         id="contacto">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="contact-content">
+
+                <div class="eyebrow">
+                    <span></span>
+                    Contacto
+                </div>
+
+                <h2>
+                    Cuéntanos qué
+                    <span>necesitas.</span>
+                </h2>
+
+                <p>
+                    Escríbenos por WhatsApp para consultar precios,
+                    paquetes, personalización o cualquier otro servicio.
+                </p>
+
+            </div>
+
+
+            <div class="contact-actions">
+
+                <a href="#"
+                   id="whatsappMain"
+                   class="whatsapp-button">
+
+                    <span class="whatsapp-icon">
+                        ☎
+                    </span>
+
+                    <span>
+                        <small>
+                            Atención por WhatsApp
+                        </small>
+
+                        <strong>
+                            Consultar ahora
+                        </strong>
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+                <div class="contact-note">
+
+                    Respuesta personalizada según
+                    las necesidades de tu negocio.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -1025,130 +1200,83 @@
 
 <footer class="footer">
 
-  <div class="container footer-grid">
+    <div class="container footer-grid">
 
-    <div class="footer-brand">
+        <div>
 
-      <a href="#inicio" class="brand">
+            <a href="#inicio"
+               class="logo footer-logo">
 
-        <span class="brand-mark">
-          E
+                <span class="logo-mark">E</span>
+
+                <span>
+                    Escalio<span>Tech</span>
+                </span>
+
+            </a>
+
+            <p>
+                Tecnología para ayudar a los negocios
+                a crecer.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#producto">
+                NFC
+            </a>
+
+            <a href="#personalizacion">
+                Personalización
+            </a>
+
+            <a href="#servicios">
+                Servicios
+            </a>
+
+            <a href="#paquetes">
+                Paquetes
+            </a>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>
+            © <span id="year"></span> EscalioTech
         </span>
 
-        <span class="brand-text">
-
-          <strong>
-            Escalio<span>Tech</span>
-          </strong>
-
-          <small>
-            TU NEGOCIO, EN EL SIGUIENTE NIVEL
-          </small>
-
+        <span>
+            Tecnología para negocios.
         </span>
 
-      </a>
-
-      <p>
-        Tecnología para ayudar a los negocios
-        a crecer.
-      </p>
-
     </div>
-
-
-    <div class="footer-column">
-
-      <h4>
-        Servicios
-      </h4>
-
-      <a href="#nfc">
-        Tarjetas NFC
-      </a>
-
-      <a href="#servicios">
-        Páginas web
-      </a>
-
-      <a href="#servicios">
-        Automatización
-      </a>
-
-      <a href="#servicios">
-        Soluciones digitales
-      </a>
-
-    </div>
-
-
-    <div class="footer-column">
-
-      <h4>
-        Empresa
-      </h4>
-
-      <a href="#proceso">
-        Cómo funciona
-      </a>
-
-      <a href="#paquetes">
-        Paquetes
-      </a>
-
-      <a href="#contacto">
-        Contacto
-      </a>
-
-    </div>
-
-
-    <div class="footer-column">
-
-      <h4>
-        Redes
-      </h4>
-
-      <a
-        data-instagram
-        href="#"
-        target="_blank">
-        Instagram
-      </a>
-
-      <a
-        data-facebook
-        href="#"
-        target="_blank">
-        Facebook
-      </a>
-
-      <a
-        data-tiktok
-        href="#"
-        target="_blank">
-        TikTok
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="container footer-bottom">
-
-    <span>
-      © <span id="year"></span> EscalioTech.
-      Todos los derechos reservados.
-    </span>
-
-    <span>
-      Tecnología para hacer crecer negocios.
-    </span>
-
-  </div>
 
 </footer>
+
+
+<!-- =========================
+     WHATSAPP FLOATING
+========================= -->
+
+<a href="#"
+   id="whatsappFloat"
+   class="whatsapp-float"
+   aria-label="Contactar por WhatsApp">
+
+    <span>☏</span>
+
+</a>
 
 
 <script src="script.js"></script>
