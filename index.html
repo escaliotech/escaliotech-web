@@ -2,197 +2,1156 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EscalioTech ayuda a los negocios a crecer con tecnología: tarjetas NFC para reseñas, páginas web y automatización.">
-  <meta name="theme-color" content="#0b1320">
-  <title>EscalioTech | Tu negocio, en el siguiente nivel</title>
+
+  <meta name="description"
+    content="EscalioTech ayuda a negocios a crecer mediante tecnología: tarjetas NFC, páginas web, automatización y soluciones digitales.">
+
+  <meta name="theme-color" content="#07111f">
+
+  <meta property="og:title" content="EscalioTech | Tecnología para hacer crecer tu negocio">
+  <meta property="og:description" content="NFC, páginas web y soluciones digitales para negocios.">
+  <meta property="og:type" content="website">
+
+  <title>EscalioTech | Tecnología para hacer crecer tu negocio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="site-header" id="inicio">
-    <div class="container nav-wrap">
-      <a class="brand" href="#inicio" aria-label="EscalioTech inicio">
-        <span class="brand-mark">E</span>
-        <span class="brand-text">
-          <strong>Escalio<span>Tech</span></strong>
-          <small>TU NEGOCIO, EN EL SIGUIENTE NIVEL</small>
-        </span>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+  <div class="container nav-wrap">
+
+    <a href="#inicio" class="brand">
+
+      <span class="brand-mark">E</span>
+
+      <span class="brand-text">
+        <strong>Escalio<span>Tech</span></strong>
+        <small>TU NEGOCIO, EN EL SIGUIENTE NIVEL</small>
+      </span>
+
+    </a>
+
+    <button
+      class="menu-toggle"
+      aria-label="Abrir menú"
+      aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav">
+
+      <a href="#nfc">NFC</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#paquetes">Paquetes</a>
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#contacto">Contacto</a>
+
+      <a
+        class="nav-cta"
+        data-whatsapp="general"
+        href="#">
+        Hablar con nosotros
       </a>
 
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </nav>
 
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="#nfc">NFC para reseñas</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#proceso">Cómo funciona</a>
-        <a href="#porque">Por qué EscalioTech</a>
-        <a class="nav-cta" data-whatsapp href="#">Hablar con nosotros</a>
-      </nav>
+  </div>
+
+</header>
+
+
+<main id="inicio">
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero section">
+
+  <div class="hero-glow glow-one"></div>
+  <div class="hero-glow glow-two"></div>
+
+  <div class="container hero-grid">
+
+    <div class="hero-copy reveal">
+
+      <div class="badge">
+        <span class="badge-dot"></span>
+        TECNOLOGÍA PARA NEGOCIOS
+      </div>
+
+      <h1>
+        Haz crecer tu
+        <span>negocio con tecnología.</span>
+      </h1>
+
+      <p class="hero-description">
+        Creamos soluciones digitales que ayudan a tu negocio
+        a conseguir más clientes, mejorar su presencia online
+        y aprovechar mejor la tecnología.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          class="btn btn-primary"
+          data-whatsapp="general"
+          href="#">
+          Quiero hacer crecer mi negocio
+          <span>→</span>
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="#servicios">
+          Ver soluciones
+        </a>
+
+      </div>
+
+      <div class="hero-trust">
+
+        <span>✓ Soluciones personalizadas</span>
+        <span>✓ Atención directa</span>
+        <span>✓ Tecnología accesible</span>
+
+      </div>
+
     </div>
-  </header>
 
-  <main>
-    <section class="hero section">
-      <div class="glow glow-1"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">TECNOLOGÍA QUE IMPULSA TU CRECIMIENTO</p>
-          <h1>Haz crecer tu<br>negocio con <span>tecnología.</span></h1>
-          <p class="lead">En EscalioTech ayudamos a los negocios a conseguir más clientes, mejorar su presencia digital y aprovechar la tecnología para crecer.</p>
-          <div class="actions">
-            <a class="btn btn-primary" data-whatsapp href="#">Quiero hacer crecer mi negocio <span>→</span></a>
-            <a class="btn btn-secondary" href="#servicios">Conoce nuestros servicios</a>
-          </div>
-          <p class="micro">TU NEGOCIO, EN EL SIGUIENTE NIVEL</p>
+
+    <div class="hero-product reveal delay-1">
+
+      <div class="product-glow"></div>
+
+      <div class="product-frame">
+
+        <div class="product-top">
+
+          <span>ESCALIOTECH</span>
+
+          <span class="product-status">
+            NFC
+          </span>
+
         </div>
 
-        <div class="hero-visual reveal delay-1">
-          <div class="visual-card">
-            <div class="visual-label">SISTEMA DE CRECIMIENTO<br>DIGITAL PARA TU NEGOCIO</div>
-            <div class="visual-logo">
-              <span class="visual-e">E</span>
-              <div><b>Escalio<span>Tech</span></b><small>TU NEGOCIO, EN EL SIGUIENTE NIVEL</small></div>
-            </div>
-            <div class="visual-line"></div>
-            <div class="visual-dots"><i></i><i></i><i></i></div>
-          </div>
+        <img
+          src="producto-nfc.jpg"
+          alt="Tarjeta NFC de EscalioTech para reseñas de Google"
+          class="product-image">
+
+        <div class="product-caption">
+
+          <strong>
+            Más fácil para tus clientes.
+          </strong>
+
+          <span>
+            Toca o escanea y conecta con tu negocio.
+          </span>
+
         </div>
+
       </div>
-    </section>
 
-    <section class="section problem" id="problema">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <p class="eyebrow">EL PROBLEMA</p>
-          <h2>¿Tu negocio está en Google Maps...<br><span>pero casi nadie lo encuentra?</span></h2>
-          <p>Tu negocio merece ser encontrado.</p>
-        </div>
-
-        <div class="problem-grid">
-          <article class="glass-card reveal"><span class="icon">⌖</span><h3>Menos visibilidad</h3><p>Tu negocio puede quedar debajo de otras opciones.</p></article>
-          <article class="glass-card reveal delay-1"><span class="icon">★</span><h3>Pocas reseñas</h3><p>Menos opiniones pueden significar menos confianza.</p></article>
-          <article class="glass-card reveal delay-2"><span class="icon">◉</span><h3>Menos confianza</h3><p>Los clientes suelen buscar señales antes de elegir.</p></article>
-          <article class="glass-card reveal delay-3"><span class="icon">↗</span><h3>Menos oportunidades</h3><p>Una presencia digital débil puede limitar nuevos clientes.</p></article>
-        </div>
-
-        <p class="solution-line">EscalioTech convierte estos problemas en <strong>soluciones digitales sencillas.</strong></p>
-      </div>
-    </section>
-
-    <section class="section nfc" id="nfc">
-      <div class="container split">
-        <div class="nfc-card-wrap reveal">
-          <div class="nfc-card">
-            <div class="nfc-top"><span>WE'D LOVE<br>YOUR FEEDBACK</span><span class="nfc-google">G</span></div>
-            <div class="stars">★★★★★</div>
-            <div class="qr">
-              <div class="qr-inner">SCAN<br>HERE</div>
-            </div>
-            <div class="nfc-bottom">Tap or Scan</div>
-          </div>
-        </div>
-
-        <div class="nfc-copy reveal delay-1">
-          <p class="eyebrow">NUESTRO PRIMER PRODUCTO</p>
-          <h2>Tarjetas NFC<br>para reseñas</h2>
-          <p>Un solo toque acerca a tus clientes a tu perfil de Google y facilita que compartan su experiencia. Menos pasos. Más facilidad.</p>
-
-          <h3>Así de fácil:</h3>
-          <div class="steps-mini">
-            <div><b>1</b><span>Tu cliente acerca su celular.</span></div>
-            <div><b>2</b><span>Accede rápidamente a tu perfil de Google.</span></div>
-            <div><b>3</b><span>Comparte su experiencia.</span></div>
-            <div><b>4</b><span>Tu negocio gana más presencia.</span></div>
-          </div>
-
-          <div class="result-pill">✦ Más reseñas → más confianza → mayor visibilidad</div>
-          <a class="btn btn-primary full" data-whatsapp href="#">Escríbenos para conocer nuestras tarjetas NFC <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section services" id="servicios">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <p class="eyebrow">SOLUCIONES</p>
-          <h2>Todo lo que tu negocio<br><span>necesita para crecer</span></h2>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card reveal"><span class="service-icon">⌁</span><h3>NFC para reseñas</h3><p>Facilita que tus clientes compartan su experiencia y ayuda a conseguir más reseñas en Google.</p><a data-whatsapp href="#">Conocer más →</a></article>
-          <article class="service-card reveal delay-1"><span class="service-icon">◎</span><h3>Páginas web</h3><p>Una página profesional para que tus clientes conozcan tu negocio, servicios y formas de contactarte.</p><a data-whatsapp href="#">Conocer más →</a></article>
-          <article class="service-card reveal delay-2"><span class="service-icon">⚙</span><h3>Automatización</h3><p>Reduce tareas repetitivas y haz que tu negocio trabaje de forma más eficiente.</p><a data-whatsapp href="#">Conocer más →</a></article>
-          <article class="service-card reveal delay-3"><span class="service-icon">✦</span><h3>Soluciones digitales</h3><p>Analizamos las necesidades de tu negocio y creamos soluciones tecnológicas adaptadas a ti.</p><a data-whatsapp href="#">Conocer más →</a></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section process" id="proceso">
-      <div class="container narrow">
-        <div class="section-heading centered reveal">
-          <p class="eyebrow">CÓMO FUNCIONA</p>
-          <h2>Simple, claro y sin complicaciones</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item reveal"><span class="num">01</span><div><h3>Conocemos tu negocio</h3><p>Entendemos qué haces y qué quieres mejorar.</p></div></article>
-          <article class="timeline-item right reveal delay-1"><span class="num">02</span><div><h3>Diseñamos la solución</h3><p>Elegimos las herramientas tecnológicas adecuadas para tu negocio.</p></div></article>
-          <article class="timeline-item reveal delay-2"><span class="num">03</span><div><h3>Haz crecer tu negocio</h3><p>Implementamos la solución y te ayudamos a aprovecharla.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section why" id="porque">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <p class="eyebrow">POR QUÉ ESCALIOTECH</p>
-          <h2>Innovación que<br><span>impulsa tu crecimiento.</span></h2>
-          <p>Ayudamos a los negocios a aprovechar la tecnología para mejorar su presencia digital y conectar con más clientes.</p>
-        </div>
-
-        <div class="why-grid">
-          <article class="why-card reveal"><span>♢</span><h3>Innovación</h3><p>Soluciones modernas y simples de implementar.</p></article>
-          <article class="why-card reveal delay-1"><span>↗</span><h3>Crecimiento</h3><p>Más clientes y mejor presencia digital.</p></article>
-          <article class="why-card reveal delay-2"><span>⌖</span><h3>Posicionamiento</h3><p>Que tu negocio sea más fácil de encontrar.</p></article>
-          <article class="why-card reveal delay-3"><span>◈</span><h3>Tecnología</h3><p>Herramientas digitales accesibles para ti.</p></article>
-        </div>
-
-        <div class="cta reveal">
-          <p class="eyebrow">TU NEGOCIO, EN EL SIGUIENTE NIVEL</p>
-          <h2>¿Listo para llevar tu<br>negocio al <span>siguiente nivel?</span></h2>
-          <p>Cuéntanos qué necesita tu negocio y encontremos juntos una solución.</p>
-          <a class="btn btn-primary" data-whatsapp href="#">Hablar con EscalioTech <span>→</span></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="brand">
-        <span class="brand-mark">E</span>
-        <span class="brand-text"><strong>Escalio<span>Tech</span></strong><small>TU NEGOCIO, EN EL SIGUIENTE NIVEL</small></span>
-      </div>
-      <div class="footer-links">
-        <a href="#servicios">Servicios</a>
-        <a href="#proceso">Cómo funciona</a>
-        <a href="#porque">Por qué EscalioTech</a>
-      </div>
-      <div class="socials">
-        <a data-instagram href="#" aria-label="Instagram">Instagram</a>
-        <a data-facebook href="#" aria-label="Facebook">Facebook</a>
-        <a data-tiktok href="#" aria-label="TikTok">TikTok</a>
-      </div>
     </div>
-    <div class="container footer-bottom">
-      <span>© <span id="year"></span> EscalioTech. Todos los derechos reservados.</span>
-      <span>Hecho con tecnología para hacer crecer negocios.</span>
-    </div>
-  </footer>
 
-  <script src="script.js"></script>
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROBLEMA
+========================= -->
+
+<section class="section problem-section">
+
+  <div class="container">
+
+    <div class="section-heading centered reveal">
+
+      <div class="eyebrow">
+        EL PROBLEMA
+      </div>
+
+      <h2>
+        Tu negocio puede ser bueno.
+        <span>Pero necesita ser encontrado.</span>
+      </h2>
+
+      <p>
+        Hoy los clientes buscan negocios en internet antes
+        de tomar una decisión.
+      </p>
+
+    </div>
+
+
+    <div class="problem-grid">
+
+      <article class="info-card reveal">
+
+        <div class="card-icon">⌖</div>
+
+        <h3>Poca visibilidad</h3>
+
+        <p>
+          Si tus clientes no encuentran fácilmente tu negocio,
+          puedes perder oportunidades.
+        </p>
+
+      </article>
+
+
+      <article class="info-card reveal delay-1">
+
+        <div class="card-icon">★</div>
+
+        <h3>Pocas reseñas</h3>
+
+        <p>
+          Las opiniones ayudan a generar confianza antes
+          de que una persona elija dónde comprar.
+        </p>
+
+      </article>
+
+
+      <article class="info-card reveal delay-2">
+
+        <div class="card-icon">◎</div>
+
+        <h3>Presencia digital débil</h3>
+
+        <p>
+          Una presencia profesional facilita que tus clientes
+          conozcan y recuerden tu negocio.
+        </p>
+
+      </article>
+
+
+      <article class="info-card reveal delay-3">
+
+        <div class="card-icon">↗</div>
+
+        <h3>Procesos manuales</h3>
+
+        <p>
+          Algunas tareas pueden automatizarse para ahorrar
+          tiempo y mejorar tu operación.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     NFC
+========================= -->
+
+<section class="section nfc-section" id="nfc">
+
+  <div class="container nfc-grid">
+
+    <div class="nfc-visual reveal">
+
+      <div class="image-backdrop"></div>
+
+      <div class="nfc-image-card">
+
+        <img
+          src="producto-nfc.jpg"
+          alt="Producto NFC EscalioTech"
+          loading="lazy">
+
+        <div class="floating-tag tag-one">
+          NFC
+        </div>
+
+        <div class="floating-tag tag-two">
+          ★ Reseñas
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="nfc-content reveal delay-1">
+
+      <div class="eyebrow">
+        PRODUCTO DESTACADO
+      </div>
+
+      <h2>
+        Convierte un simple
+        <span>toque en una oportunidad.</span>
+      </h2>
+
+      <p class="section-text">
+        Nuestras tarjetas NFC permiten que tus clientes
+        accedan fácilmente al destino digital que tú elijas,
+        como tu perfil de Google, redes sociales, WhatsApp
+        o página web.
+      </p>
+
+
+      <div class="feature-list">
+
+        <div class="feature-item">
+          <span>01</span>
+          <div>
+            <strong>Acerca el celular</strong>
+            <p>El cliente utiliza NFC o escanea el QR.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <span>02</span>
+          <div>
+            <strong>Accede al enlace</strong>
+            <p>Se abre automáticamente el destino configurado.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <span>03</span>
+          <div>
+            <strong>Facilita la acción</strong>
+            <p>Menos pasos para interactuar con tu negocio.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="result-box">
+
+        <strong>
+          Más facilidad → más interacciones → más oportunidades
+        </strong>
+
+      </div>
+
+
+      <a
+        class="btn btn-primary"
+        data-whatsapp="nfc"
+        href="#">
+        Consultar tarjetas NFC
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICIOS
+========================= -->
+
+<section class="section services-section" id="servicios">
+
+  <div class="container">
+
+    <div class="section-heading centered reveal">
+
+      <div class="eyebrow">
+        SOLUCIONES DIGITALES
+      </div>
+
+      <h2>
+        Tecnología que trabaja
+        <span>para tu negocio.</span>
+      </h2>
+
+      <p>
+        Elige la solución que necesitas o cuéntanos qué
+        quieres mejorar y diseñaremos una propuesta para ti.
+      </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+      <!-- NFC -->
+
+      <article class="service-card featured reveal">
+
+        <div class="service-number">
+          01
+        </div>
+
+        <div class="service-icon">
+          NFC
+        </div>
+
+        <h3>
+          Tarjetas NFC
+        </h3>
+
+        <p>
+          Facilita que tus clientes interactúen con tu negocio
+          mediante NFC y códigos QR.
+        </p>
+
+        <ul>
+          <li>✓ NFC + QR</li>
+          <li>✓ Diseño personalizado</li>
+          <li>✓ Enlace configurable</li>
+          <li>✓ Ideal para negocios físicos</li>
+        </ul>
+
+        <div class="service-price">
+          <small>Precio y paquetes</small>
+          <strong>Consultar</strong>
+        </div>
+
+        <a
+          class="service-button"
+          data-whatsapp="nfc"
+          href="#">
+          Consultar NFC →
+        </a>
+
+      </article>
+
+
+      <!-- WEB -->
+
+      <article class="service-card reveal delay-1">
+
+        <div class="service-number">
+          02
+        </div>
+
+        <div class="service-icon">
+          WEB
+        </div>
+
+        <h3>
+          Páginas web
+        </h3>
+
+        <p>
+          Diseñamos páginas modernas y profesionales para
+          presentar tu negocio en internet.
+        </p>
+
+        <ul>
+          <li>✓ Diseño adaptable a celular</li>
+          <li>✓ Información de tu negocio</li>
+          <li>✓ Botones de contacto</li>
+          <li>✓ Integración con redes</li>
+        </ul>
+
+        <div class="service-price">
+          <small>Precio y paquetes</small>
+          <strong>Consultar</strong>
+        </div>
+
+        <a
+          class="service-button"
+          data-whatsapp="web"
+          href="#">
+          Cotizar página web →
+        </a>
+
+      </article>
+
+
+      <!-- AUTOMATIZACIÓN -->
+
+      <article class="service-card reveal delay-2">
+
+        <div class="service-number">
+          03
+        </div>
+
+        <div class="service-icon">
+          AUTO
+        </div>
+
+        <h3>
+          Automatización
+        </h3>
+
+        <p>
+          Automatizamos procesos repetitivos para ayudarte
+          a ahorrar tiempo y trabajar de forma más eficiente.
+        </p>
+
+        <ul>
+          <li>✓ Procesos automáticos</li>
+          <li>✓ Formularios</li>
+          <li>✓ Flujos digitales</li>
+          <li>✓ Soluciones personalizadas</li>
+        </ul>
+
+        <div class="service-price">
+          <small>Precio y paquetes</small>
+          <strong>Consultar</strong>
+        </div>
+
+        <a
+          class="service-button"
+          data-whatsapp="automation"
+          href="#">
+          Consultar automatización →
+        </a>
+
+      </article>
+
+
+      <!-- SOLUCIONES -->
+
+      <article class="service-card reveal delay-3">
+
+        <div class="service-number">
+          04
+        </div>
+
+        <div class="service-icon">
+          +
+        </div>
+
+        <h3>
+          Soluciones digitales
+        </h3>
+
+        <p>
+          ¿Tienes una necesidad específica? Podemos crear
+          una solución tecnológica adaptada a tu negocio.
+        </p>
+
+        <ul>
+          <li>✓ Análisis de necesidades</li>
+          <li>✓ Desarrollo personalizado</li>
+          <li>✓ Integraciones</li>
+          <li>✓ Tecnología para crecer</li>
+        </ul>
+
+        <div class="service-price">
+          <small>Precio y paquetes</small>
+          <strong>Consultar</strong>
+        </div>
+
+        <a
+          class="service-button"
+          data-whatsapp="custom"
+          href="#">
+          Hablar sobre mi proyecto →
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PAQUETES
+========================= -->
+
+<section class="section packages-section" id="paquetes">
+
+  <div class="container">
+
+    <div class="section-heading centered reveal">
+
+      <div class="eyebrow">
+        PAQUETES
+      </div>
+
+      <h2>
+        Una solución para cada
+        <span>etapa de tu negocio.</span>
+      </h2>
+
+      <p>
+        Todavía no mostramos precios fijos porque cada negocio
+        tiene necesidades diferentes.
+      </p>
+
+    </div>
+
+
+    <div class="packages-grid">
+
+
+      <article class="package-card reveal">
+
+        <div class="package-top">
+
+          <span class="package-label">
+            INICIO
+          </span>
+
+          <span class="package-icon">
+            01
+          </span>
+
+        </div>
+
+        <h3>
+          Presencia digital
+        </h3>
+
+        <p>
+          Para negocios que quieren comenzar a fortalecer
+          su presencia digital.
+        </p>
+
+        <div class="package-price">
+          Consultar precios
+        </div>
+
+        <ul>
+          <li>✓ Solución digital inicial</li>
+          <li>✓ Orientación personalizada</li>
+          <li>✓ Configuración básica</li>
+        </ul>
+
+        <a
+          href="#"
+          data-whatsapp="general"
+          class="package-button">
+          Consultar paquete
+        </a>
+
+      </article>
+
+
+      <article class="package-card popular reveal delay-1">
+
+        <div class="popular-badge">
+          MÁS SOLICITADO
+        </div>
+
+        <div class="package-top">
+
+          <span class="package-label">
+            CRECIMIENTO
+          </span>
+
+          <span class="package-icon">
+            02
+          </span>
+
+        </div>
+
+        <h3>
+          Crecimiento digital
+        </h3>
+
+        <p>
+          Combina diferentes herramientas para mejorar
+          la presencia y experiencia de tus clientes.
+        </p>
+
+        <div class="package-price">
+          Consultar precios
+        </div>
+
+        <ul>
+          <li>✓ Soluciones combinadas</li>
+          <li>✓ Diseño personalizado</li>
+          <li>✓ Configuración</li>
+          <li>✓ Atención personalizada</li>
+        </ul>
+
+        <a
+          href="#"
+          data-whatsapp="package"
+          class="package-button primary">
+          Consultar paquete
+        </a>
+
+      </article>
+
+
+      <article class="package-card reveal delay-2">
+
+        <div class="package-top">
+
+          <span class="package-label">
+            PERSONALIZADO
+          </span>
+
+          <span class="package-icon">
+            03
+          </span>
+
+        </div>
+
+        <h3>
+          Solución a medida
+        </h3>
+
+        <p>
+          Para negocios que necesitan una solución
+          tecnológica específica.
+        </p>
+
+        <div class="package-price">
+          Cotización personalizada
+        </div>
+
+        <ul>
+          <li>✓ Análisis del negocio</li>
+          <li>✓ Propuesta personalizada</li>
+          <li>✓ Desarrollo</li>
+          <li>✓ Implementación</li>
+        </ul>
+
+        <a
+          href="#"
+          data-whatsapp="custom"
+          class="package-button">
+          Crear mi solución
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROCESO
+========================= -->
+
+<section class="section process-section" id="proceso">
+
+  <div class="container narrow">
+
+    <div class="section-heading centered reveal">
+
+      <div class="eyebrow">
+        CÓMO FUNCIONA
+      </div>
+
+      <h2>
+        Simple.
+        <span>Claro. Profesional.</span>
+      </h2>
+
+    </div>
+
+
+    <div class="process-list">
+
+      <div class="process-item reveal">
+
+        <div class="process-number">
+          01
+        </div>
+
+        <div>
+          <h3>
+            Conocemos tu negocio
+          </h3>
+
+          <p>
+            Nos cuentas qué haces, qué necesitas y qué
+            quieres mejorar.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="process-line"></div>
+
+
+      <div class="process-item reveal delay-1">
+
+        <div class="process-number">
+          02
+        </div>
+
+        <div>
+          <h3>
+            Diseñamos una solución
+          </h3>
+
+          <p>
+            Elegimos las herramientas y tecnología que
+            realmente tengan sentido para tu negocio.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="process-line"></div>
+
+
+      <div class="process-item reveal delay-2">
+
+        <div class="process-number">
+          03
+        </div>
+
+        <div>
+          <h3>
+            Implementamos
+          </h3>
+
+          <p>
+            Ponemos en marcha la solución y dejamos todo
+            preparado para que puedas utilizarlo.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="process-line"></div>
+
+
+      <div class="process-item reveal delay-3">
+
+        <div class="process-number">
+          04
+        </div>
+
+        <div>
+          <h3>
+            Tu negocio sigue creciendo
+          </h3>
+
+          <p>
+            La tecnología deja de ser complicada y comienza
+            a trabajar a favor de tu negocio.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     POR QUÉ
+========================= -->
+
+<section class="section why-section">
+
+  <div class="container">
+
+    <div class="section-heading centered reveal">
+
+      <div class="eyebrow">
+        ¿POR QUÉ ESCALIOTECH?
+      </div>
+
+      <h2>
+        Tecnología pensada para
+        <span>negocios reales.</span>
+      </h2>
+
+    </div>
+
+
+    <div class="why-grid">
+
+      <article class="why-card reveal">
+
+        <div>✦</div>
+
+        <h3>
+          Innovación
+        </h3>
+
+        <p>
+          Incorporamos herramientas modernas para ayudarte
+          a diferenciarte.
+        </p>
+
+      </article>
+
+
+      <article class="why-card reveal delay-1">
+
+        <div>↗</div>
+
+        <h3>
+          Crecimiento
+        </h3>
+
+        <p>
+          Cada solución busca generar una mejora real
+          para tu negocio.
+        </p>
+
+      </article>
+
+
+      <article class="why-card reveal delay-2">
+
+        <div>◎</div>
+
+        <h3>
+          Simplicidad
+        </h3>
+
+        <p>
+          Tecnología fácil de entender y pensada para
+          que puedas utilizarla.
+        </p>
+
+      </article>
+
+
+      <article class="why-card reveal delay-3">
+
+        <div>◆</div>
+
+        <h3>
+          Personalización
+        </h3>
+
+        <p>
+          No todos los negocios necesitan lo mismo.
+          Adaptamos la solución.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="section final-section" id="contacto">
+
+  <div class="container">
+
+    <div class="final-cta reveal">
+
+      <div class="final-glow"></div>
+
+      <div class="eyebrow">
+        TU NEGOCIO, EN EL SIGUIENTE NIVEL
+      </div>
+
+      <h2>
+        ¿Qué podemos hacer
+        <span>por tu negocio?</span>
+      </h2>
+
+      <p>
+        Cuéntanos qué necesitas y te ayudaremos a encontrar
+        la solución tecnológica adecuada.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          class="btn btn-primary"
+          data-whatsapp="general"
+          href="#">
+          Hablar con EscalioTech
+          <span>→</span>
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="#servicios">
+          Ver servicios
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+
+      <a href="#inicio" class="brand">
+
+        <span class="brand-mark">
+          E
+        </span>
+
+        <span class="brand-text">
+
+          <strong>
+            Escalio<span>Tech</span>
+          </strong>
+
+          <small>
+            TU NEGOCIO, EN EL SIGUIENTE NIVEL
+          </small>
+
+        </span>
+
+      </a>
+
+      <p>
+        Tecnología para ayudar a los negocios
+        a crecer.
+      </p>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>
+        Servicios
+      </h4>
+
+      <a href="#nfc">
+        Tarjetas NFC
+      </a>
+
+      <a href="#servicios">
+        Páginas web
+      </a>
+
+      <a href="#servicios">
+        Automatización
+      </a>
+
+      <a href="#servicios">
+        Soluciones digitales
+      </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>
+        Empresa
+      </h4>
+
+      <a href="#proceso">
+        Cómo funciona
+      </a>
+
+      <a href="#paquetes">
+        Paquetes
+      </a>
+
+      <a href="#contacto">
+        Contacto
+      </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>
+        Redes
+      </h4>
+
+      <a
+        data-instagram
+        href="#"
+        target="_blank">
+        Instagram
+      </a>
+
+      <a
+        data-facebook
+        href="#"
+        target="_blank">
+        Facebook
+      </a>
+
+      <a
+        data-tiktok
+        href="#"
+        target="_blank">
+        TikTok
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="container footer-bottom">
+
+    <span>
+      © <span id="year"></span> EscalioTech.
+      Todos los derechos reservados.
+    </span>
+
+    <span>
+      Tecnología para hacer crecer negocios.
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
