@@ -1,460 +1,581 @@
 /* =====================================================
-   ESCALIOTECH V3
-   JAVASCRIPT
-   ===================================================== */
+   ESCALIOTECH V4
+   JavaScript
+===================================================== */
 
 
-/* =========================
+/* =====================================================
    CONFIGURACIÓN
-========================= */
+===================================================== */
 
-/*
-   IMPORTANTE:
+const CONFIG = {
 
-   Cambia este número por tu WhatsApp.
+  whatsapp: "523319057803",
 
-   Formato:
+  instagram:
+    "https://instagram.com/escaliotech",
 
-   México:
-   52 + número de 10 dígitos
+  facebook:
+    "https://facebook.com/escaliotech"
 
-   Ejemplo:
-   523312345678
-
-   SIN:
-   +
-   espacios
-   guiones
-*/
-
-const WHATSAPP_NUMBER = "523312345678";
+};
 
 
-/* =========================
+/* =====================================================
+   MENSAJES DE WHATSAPP
+===================================================== */
+
+const whatsappMessages = {
+
+  general:
+    "Hola, EscalioTech. Me interesa conocer sus soluciones tecnológicas para mi negocio.",
+
+  nfc:
+    "Hola, EscalioTech. Me interesa conocer los paquetes y opciones de sus placas NFC + QR para mi negocio.",
+
+  personalizada:
+    "Hola, EscalioTech. Me interesa una placa NFC personalizada con el logo y la identidad de mi negocio.",
+
+  web:
+    "Hola, EscalioTech. Me interesa crear una página web profesional para mi negocio.",
+
+  automatizacion:
+    "Hola, EscalioTech. Me interesa conocer las soluciones de automatización que pueden implementar en mi negocio."
+
+};
+
+
+/* =====================================================
+   CREAR LINK WHATSAPP
+===================================================== */
+
+function createWhatsAppLink(type = "general") {
+
+  const message =
+    whatsappMessages[type] ||
+    whatsappMessages.general;
+
+  return (
+    "https://wa.me/" +
+    CONFIG.whatsapp +
+    "?text=" +
+    encodeURIComponent(message)
+  );
+
+}
+
+
+/* =====================================================
+   ASIGNAR WHATSAPP A BOTONES
+===================================================== */
+
+document
+  .querySelectorAll("[data-whatsapp]")
+  .forEach(button => {
+
+    const type =
+      button.dataset.whatsapp ||
+      "general";
+
+    button.href =
+      createWhatsAppLink(type);
+
+    button.target =
+      "_blank";
+
+    button.rel =
+      "noopener";
+
+  });
+
+
+/* =====================================================
    MENÚ MÓVIL
-========================= */
+===================================================== */
 
-const menuButton =
-    document.getElementById("menuButton");
+const menuToggle =
+  document.querySelector(".menu-toggle");
 
-const mobileMenu =
-    document.getElementById("mobileMenu");
+const navigation =
+  document.querySelector(".navigation");
 
 
-if (menuButton && mobileMenu) {
+if (menuToggle && navigation) {
 
-    menuButton.addEventListener(
+  menuToggle.addEventListener(
+    "click",
+    () => {
+
+      const isOpen =
+        navigation.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+    }
+  );
+
+
+  navigation
+    .querySelectorAll("a")
+    .forEach(link => {
+
+      link.addEventListener(
         "click",
         () => {
 
-            const isOpen =
-                mobileMenu.classList.toggle("active");
+          navigation.classList.remove(
+            "open"
+          );
 
-            mobileMenu.style.display =
-                isOpen ? "block" : "none";
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
 
         }
-    );
-
-
-    const mobileLinks =
-        mobileMenu.querySelectorAll("a");
-
-
-    mobileLinks.forEach(link => {
-
-        link.addEventListener(
-            "click",
-            () => {
-
-                mobileMenu.classList.remove(
-                    "active"
-                );
-
-                mobileMenu.style.display =
-                    "none";
-
-            }
-        );
+      );
 
     });
 
 }
 
 
-/* =========================
-   GALERÍA
-========================= */
+/* =====================================================
+   GALERÍA DE PRODUCTO
+===================================================== */
 
 const mainProductImage =
-    document.getElementById(
-        "mainProductImage"
-    );
+  document.querySelector(
+    "#mainProductImage"
+  );
 
-const galleryCaption =
-    document.getElementById(
-        "galleryCaption"
-    );
-
-const galleryButtons =
-    document.querySelectorAll(
-        ".gallery-thumb"
-    );
+const thumbnails =
+  document.querySelectorAll(
+    ".thumbnail"
+  );
 
 
-galleryButtons.forEach(button => {
+thumbnails.forEach(thumbnail => {
 
-    button.addEventListener(
-        "click",
-        () => {
+  thumbnail.addEventListener(
+    "click",
+    () => {
 
-            const image =
-                button.dataset.image;
+      const image =
+        thumbnail.dataset.image;
 
-            const title =
-                button.dataset.title;
-
-
-            if (!mainProductImage) return;
+      const alt =
+        thumbnail.dataset.alt ||
+        "Producto NFC EscalioTech";
 
 
-            mainProductImage.style.opacity =
-                "0";
+      if (mainProductImage) {
+
+        mainProductImage.src =
+          image;
+
+        mainProductImage.alt =
+          alt;
+
+      }
 
 
-            setTimeout(() => {
+      thumbnails.forEach(item => {
 
-                mainProductImage.src =
-                    image;
+        item.classList.remove(
+          "active"
+        );
 
-                mainProductImage.style.opacity =
-                    "1";
-
-            }, 150);
+      });
 
 
-            if (galleryCaption) {
+      thumbnail.classList.add(
+        "active"
+      );
 
-                galleryCaption.textContent =
-                    title;
-
-            }
-
-
-            galleryButtons.forEach(
-                item => {
-
-                    item.classList.remove(
-                        "active"
-                    );
-
-                }
-            );
-
-
-            button.classList.add(
-                "active"
-            );
-
-        }
-    );
+    }
+  );
 
 });
 
 
-/* =========================
-   WHATSAPP
-========================= */
+/* =====================================================
+   MODAL DE IMÁGENES
+===================================================== */
+
+const imageModal =
+  document.querySelector(
+    "#imageModal"
+  );
+
+const modalImage =
+  document.querySelector(
+    "#modalImage"
+  );
+
+const modalClose =
+  document.querySelector(
+    "#modalClose"
+  );
+
+const expandImage =
+  document.querySelector(
+    "#expandImage"
+  );
 
 
-/*
-   Mensajes personalizados
-   según el servicio.
-*/
+function openImageModal() {
 
-const whatsappMessages = {
-
-    nfc:
-        "Hola EscalioTech, me interesa conocer las placas NFC + QR para mi negocio. ¿Me pueden compartir información y opciones?",
-
-    personalizada:
-        "Hola EscalioTech, me interesa una placa NFC personalizada con el logo y estilo de mi negocio. ¿Me pueden compartir información y opciones?",
-
-    web:
-        "Hola EscalioTech, me interesa conocer sus servicios de páginas web para mi negocio. ¿Me pueden compartir información?",
-
-    automatizacion:
-        "Hola EscalioTech, me interesa conocer sus servicios de automatización para mi negocio. ¿Me pueden compartir información?",
-
-    solucion:
-        "Hola EscalioTech, quiero conocer las soluciones tecnológicas que pueden ofrecer para mi negocio. ¿Me pueden orientar?",
-
-    general:
-        "Hola EscalioTech, me interesa conocer sus productos y servicios para mi negocio. ¿Me pueden compartir información sobre precios y paquetes?"
-
-};
+  if (!imageModal || !modalImage) {
+    return;
+  }
 
 
-/* Crear URL */
+  modalImage.src =
+    mainProductImage.src;
 
-function createWhatsAppURL(service = "general") {
-
-    const message =
-        whatsappMessages[service] ||
-        whatsappMessages.general;
+  modalImage.alt =
+    mainProductImage.alt;
 
 
-    return (
-        "https://wa.me/" +
-        WHATSAPP_NUMBER +
-        "?text=" +
-        encodeURIComponent(message)
-    );
+  imageModal.classList.add(
+    "open"
+  );
+
+  imageModal.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+  document.body.classList.add(
+    "modal-open"
+  );
 
 }
 
 
-/* Botón principal */
+function closeImageModal() {
 
-const whatsappMain =
-    document.getElementById(
-        "whatsappMain"
+  if (!imageModal) {
+    return;
+  }
+
+
+  imageModal.classList.remove(
+    "open"
+  );
+
+  imageModal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+  document.body.classList.remove(
+    "modal-open"
+  );
+
+}
+
+
+if (expandImage) {
+
+  expandImage.addEventListener(
+    "click",
+    openImageModal
+  );
+
+}
+
+
+if (modalClose) {
+
+  modalClose.addEventListener(
+    "click",
+    closeImageModal
+  );
+
+}
+
+
+if (imageModal) {
+
+  imageModal.addEventListener(
+    "click",
+    event => {
+
+      if (
+        event.target === imageModal
+      ) {
+
+        closeImageModal();
+
+      }
+
+    }
+  );
+
+}
+
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (
+      event.key === "Escape"
+    ) {
+
+      closeImageModal();
+
+    }
+
+  }
+);
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+const faqItems =
+  document.querySelectorAll(
+    ".faq-item"
+  );
+
+
+faqItems.forEach(item => {
+
+  const question =
+    item.querySelector(
+      ".faq-question"
+    );
+
+  const answer =
+    item.querySelector(
+      ".faq-answer"
     );
 
 
-if (whatsappMain) {
+  question.addEventListener(
+    "click",
+    () => {
 
-    whatsappMain.href =
-        createWhatsAppURL(
-            "general"
+      const alreadyOpen =
+        item.classList.contains(
+          "open"
         );
 
-}
 
+      faqItems.forEach(other => {
 
-/* Botón flotante */
-
-const whatsappFloat =
-    document.getElementById(
-        "whatsappFloat"
-    );
-
-
-if (whatsappFloat) {
-
-    whatsappFloat.href =
-        createWhatsAppURL(
-            "general"
+        other.classList.remove(
+          "open"
         );
 
-}
+        const otherAnswer =
+          other.querySelector(
+            ".faq-answer"
+          );
 
+        if (otherAnswer) {
 
-/* Botones de servicios */
-
-const serviceButtons =
-    document.querySelectorAll(
-        "[data-service]"
-    );
-
-
-serviceButtons.forEach(button => {
-
-    button.addEventListener(
-        "click",
-        () => {
-
-            const service =
-                button.dataset.service;
-
-
-            /*
-               El enlace principal de contacto
-               recibe temporalmente el mensaje
-               correspondiente.
-            */
-
-            if (whatsappMain) {
-
-                whatsappMain.href =
-                    createWhatsAppURL(
-                        service
-                    );
-
-            }
+          otherAnswer.style.maxHeight =
+            null;
 
         }
-    );
+
+      });
+
+
+      if (!alreadyOpen) {
+
+        item.classList.add(
+          "open"
+        );
+
+        answer.style.maxHeight =
+          answer.scrollHeight +
+          "px";
+
+      }
+
+    }
+  );
 
 });
 
 
-/* =========================
+/* =====================================================
+   ANIMACIONES AL HACER SCROLL
+===================================================== */
+
+const revealElements =
+  document.querySelectorAll(
+    ".reveal"
+  );
+
+
+const revealObserver =
+  new IntersectionObserver(
+    entries => {
+
+      entries.forEach(entry => {
+
+        if (
+          entry.isIntersecting
+        ) {
+
+          entry.target.classList.add(
+            "visible"
+          );
+
+          revealObserver.unobserve(
+            entry.target
+          );
+
+        }
+
+      });
+
+    },
+    {
+      threshold: .12
+    }
+  );
+
+
+revealElements.forEach(element => {
+
+  revealObserver.observe(
+    element
+  );
+
+});
+
+
+/* =====================================================
+   AÑO AUTOMÁTICO
+===================================================== */
+
+const yearElement =
+  document.querySelector(
+    "#year"
+  );
+
+
+if (yearElement) {
+
+  yearElement.textContent =
+    new Date().getFullYear();
+
+}
+
+
+/* =====================================================
+   LINKS DE REDES
+===================================================== */
+
+document
+  .querySelectorAll(
+    "[data-instagram]"
+  )
+  .forEach(link => {
+
+    link.href =
+      CONFIG.instagram;
+
+    link.target =
+      "_blank";
+
+    link.rel =
+      "noopener";
+
+  });
+
+
+document
+  .querySelectorAll(
+    "[data-facebook]"
+  )
+  .forEach(link => {
+
+    link.href =
+      CONFIG.facebook;
+
+    link.target =
+      "_blank";
+
+    link.rel =
+      "noopener";
+
+  });
+
+
+/* =====================================================
    HEADER AL HACER SCROLL
-========================= */
+===================================================== */
 
 const header =
-    document.getElementById("header");
+  document.querySelector(
+    ".header"
+  );
 
 
 window.addEventListener(
-    "scroll",
-    () => {
+  "scroll",
+  () => {
 
-        if (!header) return;
+    if (!header) {
+      return;
+    }
 
 
-        if (window.scrollY > 30) {
+    if (
+      window.scrollY > 30
+    ) {
 
-            header.style.background =
-                "rgba(5,7,13,.92)";
+      header.style.background =
+        "rgba(5,11,20,.94)";
 
-        } else {
+    } else {
 
-            header.style.background =
-                "rgba(5,7,13,.78)";
-
-        }
+      header.style.background =
+        "rgba(5,11,20,.82)";
 
     }
+
+  },
+  {
+    passive: true
+  }
 );
 
 
-/* =========================
-   ANIMACIONES AL APARECER
-========================= */
+/* =====================================================
+   PREVENIR ERRORES DE IMÁGENES
+===================================================== */
 
-const animatedElements =
-    document.querySelectorAll(
-        ".benefit-card, .service-card, .package-card, .step"
+document
+  .querySelectorAll("img")
+  .forEach(image => {
+
+    image.addEventListener(
+      "error",
+      () => {
+
+        image.classList.add(
+          "image-error"
+        );
+
+      }
     );
 
-
-const observer =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (
-                    entry.isIntersecting
-                ) {
-
-                    entry.target.classList.add(
-                        "visible"
-                    );
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
+  });
 
 
-animatedElements.forEach(
-    element => {
-
-        observer.observe(element);
-
-    }
-);
-
-
-/* =========================
-   AÑO AUTOMÁTICO
-========================= */
-
-const year =
-    document.getElementById(
-        "year"
-    );
-
-
-if (year) {
-
-    year.textContent =
-        new Date().getFullYear();
-
-}
-
-
-/* =========================
-   SCROLL SUAVE
-========================= */
-
-document.querySelectorAll(
-    'a[href^="#"]'
-).forEach(anchor => {
-
-    anchor.addEventListener(
-        "click",
-        function(event) {
-
-            const targetId =
-                this.getAttribute(
-                    "href"
-                );
-
-
-            if (
-                targetId === "#" ||
-                !targetId
-            ) {
-
-                return;
-
-            }
-
-
-            const target =
-                document.querySelector(
-                    targetId
-                );
-
-
-            if (!target) return;
-
-
-            event.preventDefault();
-
-
-            const headerHeight =
-                header
-                    ? header.offsetHeight
-                    : 0;
-
-
-            const targetPosition =
-                target.getBoundingClientRect()
-                    .top +
-                window.scrollY -
-                headerHeight;
-
-
-            window.scrollTo({
-
-                top:
-                    targetPosition,
-
-                behavior:
-                    "smooth"
-
-            });
-
-        }
-    );
-
-});
-
-
-/* =========================
-   MENSAJE EN CONSOLA
-========================= */
-
-console.log(
-    "EscalioTech V3 cargada correctamente."
-);
+/* =====================================================
+   FIN
+===================================================== */
